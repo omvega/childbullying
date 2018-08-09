@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ChildBullying - Aplicación Web Cyberbullying</title>
+    <!--Favicon-->
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/gif" sizes="16x16">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="{{ url_for('static', filename='vendor/magnific-popup/magnific-popup.css') }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/creative.min.css') }}" rel="stylesheet">
+
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Child<b>Bullying</b></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Acerca de</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Comenzar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Web APP para detección de cyberbullying</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Aplicación web para análisis de afecto en textos en español para detección
+            de cyberbullying</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#services">Comenzar</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    
+
+    <section id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">¡Pega tu texto acá!</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <!--Inicio Form-->
+            <form method='POST'>
+              <div class="form-group">
+                {{ text.texto(class='form-control', rows='10', placeholder='Pega tu texto acá') }}  
+              </div>
+
+              <div class="form-group">
+                <label>
+                <h6 class="section-heading">¡También puedes subir tu archivo!</h6></label>
+                <input lang='es' type="file" class="form-control-file" id="exampleFormControlFile1">
+              </div>
+            
+              <div class="col-lg-12 mx-auto text-right">
+                <input class="btn btn-primary btn-xl js-scroll-trigger" type="submit" value="Procesar">   
+              </div>
+            </form>
+            <!--Fin Form-->
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">¡Estamos aquí para ti!</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">ChildBullying es una aplicación web enfocada en la detección de 
+            cyberbullying en redes sociales impulsada por el alza de ésta actividad en tiempos actuales
+            y el bajo control que se lleva a cabo en el idioma español.</p>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Comenzar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">¡Contacto!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Si necesitas algún tipo de ayuda, no dudes en hacer efecto de los siguientes medios de 
+            contacto</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>123-456-6789</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">contacto@childbullying.com</a>
+            </p>
+          </div>
+        </div>
+        <footer class="blockquote-footer">&copy; Omar Vega B. <cite title="Source Title"> en UBB</cite></footer>
+      </div>
+
+    </section>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/scrollreveal/scrollreveal.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ url_for('static', filename='js/creative.min.js') }}"></script>
+
+  </body>
+
+</html>
